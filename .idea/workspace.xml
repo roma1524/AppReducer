@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="694c9165-a672-46bf-bb1d-8e05b8a34bfe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Todolists.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FilterButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Task.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TaskItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TodolistTitle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TodolistItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodolistItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/theme/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tasks-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/todolists-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todolists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todolists.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/romakulik/Desktop/IT-C/AppReducer/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/romankulik/Desktop/IT-C/AppReducer/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -66,7 +60,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -86,6 +80,7 @@
       <workItem from="1739124203589" duration="3000" />
       <workItem from="1739124894012" duration="1028000" />
       <workItem from="1739174943149" duration="7217000" />
+      <workItem from="1739208072325" duration="6227000" />
     </task>
     <servers />
   </component>

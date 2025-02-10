@@ -3,7 +3,7 @@ import {CreateItemForm} from "@/CreateItemForm.tsx";
 import Container from "@mui/material/Container";
 import {createTodolistAC} from "@/model/todolists-reducer.ts";
 import {useAppDispatch} from "@/common/hooks/useAppDispatch.ts";
-import {Todolists} from "@/Todolists.tsx";
+import {Todolists} from "@/features/todolists/ui/Todolists/Todolists.tsx";
 
 export const Main = () => {
 

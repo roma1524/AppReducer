@@ -68,8 +68,8 @@ test('correct task should change its title', () => {
   expect(endState.todolistId1[1].title).toBe('JS')
 })
 
-test('array should be created for new todolist', () => {
-  const endState = tasksReducer(startState, createTodolistAC('New todolist'))
+test('array should be created for new todolists', () => {
+  const endState = tasksReducer(startState, createTodolistAC('New todolists'))
 
   const keys = Object.keys(endState)
   const newKey = keys.find(k => k !== 'todolistId1' && k !== 'todolistId2')
