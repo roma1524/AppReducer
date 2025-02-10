@@ -1,5 +1,5 @@
 import type {ChangeEvent} from 'react'
-import type {FilterValues, Task, Todolist} from './app/App'
+import type {FilterValues, Todolist} from './app/App'
 import {CreateItemForm} from './CreateItemForm'
 import {EditableSpan} from './EditableSpan'
 import Checkbox from '@mui/material/Checkbox'
@@ -10,10 +10,12 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import {containerSx, getListItemSx} from './TodolistItem.styles'
+import {useAppSelector} from "@/common/hooks/useAppSelector.ts";
+import {selectTasks} from "@/model/tasks-selectors.ts";
+import {TasksState} from "@/model/tasks-reducer.ts";
 
 type Props = {
   todolist: Todolist
-  tasks: Task[]
   deleteTask: (todolistId: string, taskId: string) => void
   changeFilter: (todolistId: string, filter: FilterValues) => void
   createTask: (todolistId: string, title: string) => void
@@ -26,7 +28,6 @@ type Props = {
 export const TodolistItem = (props: Props) => {
   const {
     todolist: {id, title, filter},
-    tasks,
     deleteTask,
     changeFilter,
     createTask,
@@ -35,6 +36,18 @@ export const TodolistItem = (props: Props) => {
     changeTaskTitle,
     changeTodolistTitle,
   } = props
+
+  const tasks = useAppSelector(selectTasks)
+
+  const todolistTasks: TasksState[] = tasks[id]
+  let filteredTasks = todolistTasks
+  if (filter === 'active') {
+    filteredTasks = todolistTasks.filter(task => !task.isDone)
+  }
+  if (filter === 'completed') {
+    filteredTasks = todolistTasks.filter(task => task.isDone)
+  }
+
 
   const changeFilterHandler = (filter: FilterValues) => {
     changeFilter(id, filter)
@@ -63,11 +76,12 @@ export const TodolistItem = (props: Props) => {
           </IconButton>
         </div>
         <CreateItemForm onCreateItem={createTaskHandler}/>
-        {tasks.length === 0 ? (
+        {todolistTasks.length === 0 ? (
             <p>Тасок нет</p>
         ) : (
             <List>
-              {tasks.map(task => {
+              {filteredTasks.map(task => {
+
                 const deleteTaskHandler = () => {
                   deleteTask(id, task.id)
                 }
