@@ -1,14 +1,10 @@
-import type {FilterValues, Todolist} from '../../../../../app/App.tsx'
-import {CreateItemForm} from '../../../../../CreateItemForm.tsx'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import {containerSx} from '../../../../../TodolistItem.styles.ts'
-import {createTaskAC} from "@/model/tasks-reducer.ts";
+import {CreateItemForm} from '@/common/components/CreateItemForm/CreateItemForm.tsx'
+import {createTaskAC} from "@/features/model/tasks-reducer.ts";
 import {useAppDispatch} from '@/common/hooks/useAppDispatch.ts';
-import {changeTodolistFilterAC} from '@/model/todolists-reducer.ts';
-import {TodolistTitle} from '@/TodolistTitle.tsx';
-import {Task} from '@/Task.tsx';
-import {FilterButtons} from '@/FilterButtons.tsx';
+import {TodolistTitle} from '@/features/todolists/ui/Todolists/TodolistItem/TodolistTitle/TodolistTitle.tsx';
+import {Tasks} from '@/features/todolists/ui/Todolists/TodolistItem/Tasks/Tasks.tsx';
+import {FilterButtons} from '@/features/todolists/ui/Todolists/TodolistItem/FilterButtons/FilterButtons.tsx';
+import {Todolist} from "@/features/model/todolists-reducer.ts";
 
 type Props = {
     todolist: Todolist
@@ -26,7 +22,7 @@ export const TodolistItem = ({todolist}: Props) => {
         <div>
             <TodolistTitle todolist={todolist}/>
             <CreateItemForm onCreateItem={createTask}/>
-            <Task todolist={todolist}/>
+            <Tasks todolist={todolist}/>
             <FilterButtons todolist={todolist}/>
         </div>
     )
